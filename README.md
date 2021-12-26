@@ -34,6 +34,44 @@ module.exports = {
 
 Ejecutamos su archivo llamado index.js
 
+## nginx configuration
+
+### for Linux:
+
+```bash
+server {
+  listen 80;
+  listen [::]:80;
+
+  server_name _;
+
+  root /var/www/cliente/dist;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
+
+### for Windows:
+
+```bash
+server {
+  listen 80;
+  listen [::]:80;
+
+  server_name _;
+
+  root /var/www/cliente/dist;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
+
 ## Contributing
 
 Los pull request son bienvenidos. Se aceptan las ideas de mejora del archivo
