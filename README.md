@@ -10,6 +10,12 @@ Clonamos el [repositorio](https://github.com/D4ITON/wcopy.git)
 git clone https://github.com/D4ITON/wcopy.git
 ```
 
+Instalamos las dependencias de nodejs
+
+```bash
+npm install
+```
+
 Copiamos las configuraciones del archivo env.sample.js a env.js, copiamos las rutas que se nos muestran en
 
 - PATH_ORIGEN
