@@ -2,7 +2,7 @@
 
 Copia una carpeta completa en windows con ruta origen a ruta destino
 
-## Installation
+## Instalación
 
 Clonamos el [repositorio](https://github.com/D4ITON/wcopy.git)
 
@@ -10,7 +10,7 @@ Clonamos el [repositorio](https://github.com/D4ITON/wcopy.git)
 git clone https://github.com/D4ITON/wcopy.git
 ```
 
-Instalamos las dependencias de nodejs
+Instalamos las dependencias de nodejs, este puede ser con npm o yarn
 
 ```bash
 npm install
@@ -30,31 +30,13 @@ module.exports = {
 };
 ```
 
-## Usage
+## Uso
 
 Ejecutamos su archivo llamado index.js
 
-## nginx configuration
+## configuración de nginx
 
-### for Linux:
-
-```bash
-server {
-  listen 80;
-  listen [::]:80;
-
-  server_name _;
-
-  root /var/www/cliente/dist;
-  index index.html;
-
-  location / {
-    try_files $uri $uri/ /index.html;
-  }
-}
-```
-
-### for Windows:
+### Para Linux:
 
 ```bash
 server {
@@ -72,9 +54,23 @@ server {
 }
 ```
 
-## Contributing
+### Para Windows:
 
-Los pull request son bienvenidos. Se aceptan las ideas de mejora del archivo
+```bash
+server {
+  listen 80;
+  listen [::]:80;
+
+  server_name _;
+
+  root /var/www/cliente/dist;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
 
 ## License
 
